@@ -1,0 +1,125 @@
+L2GB Onepage​
+This article presents information about the L2GB Onepage project, including target versions, engineering and final versions, target platforms/models, vehicle model projects, version strategies, and various requirements and their associated Jira links. Key points include: ​
+Versions and Platforms：The target version is NT2 collinear, with engineering version BL350 and final version BL360. NT3.5 is to be implemented. Target platforms/models include NT3.5 P1+Lidar, Pisces ET5T, and Qinlin L50.​
+Vehicle Model Projects：There are multiple vehicle model projects, such as Cetus G1.F, Pisces - leading, Qinling - leading, etc., with different申报方式 (declaration methods), SUD times, HOMO times, AD prehomo times, AD versions, L2GB exam times, and detection institutions.​
+Version Strategies：There are version strategies with sync blocks and external domain dependencies. Pisces L2GB has new regulations and strong standards with AD prehomo in 2026.9.1, and Qinling L2GB HOMO Leading has AD prehomo in 2026.9.20.​
+Exam Schemes：There are exam schemes for different models like Qinling, Pisces, Hercules, etc., with different options.​
+Requirements and Jira Links：There are various L2GB ADRS requirements such as system activation, system exit, driver motion control intervention, etc., each with an associated Jira link and a person in charge.​
+Visual Fusion Speed Limit Scheme：There is a visual fusion speed limit scheme SAS2 with a related L2GB ADRS - Speed Limit requirement and Jira link.​
+Other Requirements：There are also requirements for ODC, TLD, HMI, product description, etc., each with its own Jira link and person in charge. ​
+DAmain2​
+​
+L2GB ADRS - 系统禁用 ​
+​
+SEBASTIAN ZIEGLMEIER
+​
+https://jira.nioint.com/browse/ADRS-370 ​
+Reserve time - L2 GB 宣讲​
+​
+​
+L2GB ADRS - Lane Change ​
+​
+Ziwei CHEN
+​
+Bing WU
+​
+https://jira.nioint.com/browse/ADRS-371 ( wu bing ) ​
+https://jira.nioint.com/browse/ADRS-372 ( ziwei, clone from 371) ​
+​
+DAmain2​
+​
+L2GB ADRS - 可控性需求 ​
+​
+SEBASTIAN ZIEGLMEIER
+​
+https://jira.nioint.com/browse/ADRS-373​
+Reserve time - L2 GB 宣讲​
+DAmain2​
+​
+L2GB ADRS - 避免驾驶员误用 ​
+​
+​
+SEBASTIAN ZIEGLMEIER
+​
+https://jira.nioint.com/browse/ADRS-374​
+Reserve time - L2 GB 宣讲​
+视觉融合限速方案SAS2​
+​
+L2GB ADRS - Speed Limit ​
+​
+Jason DU
+​
+https://jira.nioint.com/browse/ADRS-375​
+​
+You don't have permission to access this content.​
+​
+​
+L2GB ADRS - ODC-failsafe  ​
+​
+Lei WAN
+​
+https://jira.nioint.com/browse/ADRS-376​
+​AI notes: L2GB宣讲-ODC-failsafe on Jan 16, 2026​
+​
+​
+L2GB ADRS - ODC-设计运行车速范围​
+​
+SEBASTIAN ZIEGLMEIER
+​
+https://jira.nioint.com/browse/ADRS-377​
+Reserve time - L2 GB 宣讲​
+​
+​
+L2GB ADRS - ODC-场景（WIP） ​
+​
+标一下高速/城区相关 ， 高快： xinsheng 城区：liangliang​
+​
+Xinsheng XU
+​
+Miles XU
+​
+https://jira.nioint.com/browse/ADRS-378 (亮亮）​
+https://jira.nioint.com/browse/ADRS-379 xinsheng, clone from 378）​
+​
+​
+​
+L2GB ADRS - TLD​
+​
+Bing WU
+​
+https://jira.nioint.com/browse/ADRS-380​
+​
+​
+​
+L2GB ADRS - HMI（General）​
+​
+Qifan BAO
+​
+https://jira.nioint.com/browse/ADRS-381​
+​AI notes: ADRS ADRS HMI general宣讲 on Jan 15, 2026​
+​
+​
+L2GB ADRS - 产品说明 ​
+​
+​
+Xiang LI
+​
+https://jira.nioint.com/browse/ADRS-382 ​
+​
+​
+​
+​L2GB ADRS - 动态障碍物 xiaoyong 先不开​
+xiaoyong ​
+In Compiling ​
+​
+
+
+
+
+
+
+
+
+
+
+​
