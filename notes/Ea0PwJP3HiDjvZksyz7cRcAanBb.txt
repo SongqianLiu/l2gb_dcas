@@ -1,0 +1,41 @@
+L2GB ADRS - EOR​
+This article discusses the requirements, functions, timing, HMI requirements, recovery conditions, and test suggestions for the L2GB ADRS - EOR system. Key points include:​
+System Design Requirement : The system should ensure the driver continuously performs dynamic driving tasks, and detect the driver's eye - gaze deviation from the driving - related area.​
+Detection Method : If direct eye - gaze detection is unavailable, the system can indirectly detect the driver's head posture.​
+Speed Condition : When the system is activated and the speed is over 10 km/h, it should use hand - off and eye - gaze - off detection to monitor the driver.​
+Function Linkage : The system should actively start eye - gaze - off detection after activation. If it's unavailable, the function should not be activated.​
+Timing Requirement : When the speed is over 10 km/h, the system should issue an EOR within 5 s after the driver's eye - gaze deviates, and upgrade it within 3 s if the deviation continues.​
+HMI Requirement : EOR should include optical, acoustic or tactile signals; DCA should clearly prompt the driver to regain lateral control.​
+Test Suggestion : Tests include daytime and nighttime eye - gaze - off tests and DMS occlusion tests with specific test conditions and passing criteria. ​
+9.4.9.6.2 选择1名与9.4.9.5试验不同的，且无面部、眼部缺陷，符合GB/T10000—2023中18岁～60岁组身高、坐姿眼高、形态面长尺寸百分位数为P10～P90要求的成年人作为试验人员。试验人员未佩戴眼镜、帽子、口罩等面部遮挡物，且除眉毛外，面部无明显毛发。​
+视线脱离试验​
+日间测试​
+测试用例​
+9.4.9.6.3 在日间条件下，试验车辆在系统激活状态下，以 60 km/h 与 Vsminset中的较大值为巡航车速 沿车道稳定行驶后试验开始，每名试验人员保持手握转向盘同时闭眼： ​
+通过条件​
+DCA(TD)的触发时机，HMI交互符合「用户说明」​
+系统开始执行 RMF ​
+9.4.9.6.3 ​
+a) 若系统为领航组合驾驶辅助系统，系统开始执行 RMF 或系统不处于激活状态，试验结束；​
+夜间测试​
+9.4.9.6.5 若系统可在夜间处于激活状态，在夜间条件下，重复上述试验。​
+手部及视线脱离试验 ​
+脱眼被测人员要求​
+9.4.9.5.2 选择1名无面部、眼部缺陷，符合GB/T10000—2023中18岁～60岁组坐姿眼高、形态面长尺寸百分位数为P10～P90要求的成年人作为试验人员。试验人员未佩戴眼镜、帽子、口罩等面部遮挡物，且除眉毛外，面部无明显毛发。​
+日间测试​
+测试用例​
+9.4.9.5.3 在日间条件下，试验车辆在系统激活状态下，以 60 km/h 与 Vsminset中的较大值为巡航车速 沿车道稳定行驶后试验开始，每名试验人员双手脱离转向盘同时闭眼​
+通过条件​
+DCA(TD)的触发时机，HMI交互符合「用户说明」​
+系统开始执行 RMF ​
+9.4.9.5.3 ​
+a) 若系统为领航组合驾驶辅助系统，系统开始执行 RMF 或系统不处于激活状态，试验结束​
+夜间测试​
+9.4.9.5.4 若系统可在夜间处于激活状态，在夜间条件下，重复上述试验。​
+DMS遮挡测试​
+测试用例​
+9.4.9.6.4 在日间条件下，试验车辆以60km/h与Vsminset中的较大值为巡航车速沿车道行驶后激活系统，试验开始。试验人员遮挡视线脱离检测传感器​
+通过条件​
+5s内发出EOR​
+9.4.9.6.4 ...系统不处于激活状态、发出EOR或试验人员遮挡视线脱离检测传感器后10s试验结束​
+​
