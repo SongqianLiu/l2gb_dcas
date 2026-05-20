@@ -4,8 +4,8 @@
 |---|---|
 | **Risk Level** | High |
 | **EU Reference** | UN R.171 S2 §5.5.3.4.1.4 |
-| **CN ADRS Reference** | 可控性需求 ADRS |
-| **Gap Type** | Missing in CN |
+| **CN Reference** | GB draft §4.8.2.7; 可控性需求 ADRS |
+| **Gap Type** | Traceability / implementation / validation gap |
 
 ---
 
@@ -17,28 +17,38 @@
 
 ## China L2GB Status
 
-**可控性需求 ADRS** covers controllability through system-output constraints:
+The **China GB draft** already contains an aligned 50 N requirement:
+
+> 系统应使驾驶员能够通过不大于50 N 的转向操纵力干预车辆的横向运动控制。
+
+This is substantively aligned with UN R.171 S2 §5.5.3.4.1.4.
+
+However, the extracted **可控性需求 ADRS** summary mainly covers controllability through system-output constraints:
 
 - Lateral acceleration ≤ 3 m/s² (manufacturer-declared max)
 - Lateral jerk (0.5 s moving avg) ≤ 5 m/s³
 - Longitudinal deceleration ≤ −8 m/s²
 - System exit controllability for failures, ODD boundary, manoeuvre cancellation
 
-**No requirement exists** for the force a driver must exert to override lateral control assistance. The GB draft (送审稿) records steering torque as a data field but specifies no limit value. The controllability test method (§9.4.2) explicitly instructs test personnel **not to intervene** in lateral control during tests — the driver override direction is untested.
+The current project evidence therefore does **not** show a China-vs-EU regulatory gap on the 50 N limit itself. The remaining risk is whether the 50 N requirement is fully cascaded into the G1.3 ADRS, EPS/software implementation, and validation evidence.
+
+GB draft §9.4.9.1 includes steering wheel intervention tests for lane cruise and lane change. The evidence still needs to confirm whether the test setup measures the actual steering control effort and demonstrates ≤50 N across all relevant operating modes.
 
 ---
 
-## Root Cause of the Gap
+## Root Cause of the Remaining Risk
 
-China and EU approach controllability from opposite directions:
+The regulatory requirement is aligned, but the engineering evidence chain may still be incomplete:
 
-| Perspective | China 可控性需求 | EU R.171 §5.5.3.4.1.4 |
+| Layer | Current Evidence | Remaining Question |
 |---|---|---|
-| **What is constrained** | System output (acceleration, jerk) | Driver input effort required to override |
-| **Test method** | Passive observation — driver does not intervene | Active measurement — driver applies force to override |
-| **Design focus** | System behaviour within ODD | Human-machine force interface |
+| **Regulation** | CN GB draft §4.8.2.7 and EU R.171 §5.5.3.4.1.4 both specify ≤50 N | Aligned |
+| **ADRS** | Extracted 可控性需求 ADRS summary emphasizes acceleration, jerk, warning, exit behavior | Does the detailed ADRS explicitly include ≤50 N? |
+| **Software** | No software requirement evidence reviewed yet | Does AD control yield priority to driver steering input under all lateral-control features? |
+| **EPS calibration** | No calibration evidence reviewed yet | Is opposing torque limited so steering effort stays ≤50 N? |
+| **Validation** | GB includes steering wheel intervention tests | Is steering effort physically measured and reported for EU type approval? |
 
-These are **not equivalent**. A system can comply with all China acceleration limits and still require excessive driver effort to override, if the EPS servo strategy treats driver input as noise to be filtered out rather than a priority command.
+A vehicle can be compliant on paper with the GB/R.171 clause but still fail approval if the implementation or validation evidence does not prove that the driver can override lateral assistance within the 50 N limit.
 
 ---
 
@@ -72,21 +82,25 @@ This means that when DCAS is active, the net opposing torque the EPS presents to
 
 ---
 
-## CN ADRS Change Required
+## Required Closure Action
 
-The **可控性需求 ADRS** needs a new requirement added for EU variant:
+The **可控性需求 ADRS** and EU variant evidence package should explicitly include:
 
 > When DCAS lateral control assistance is active, the steering input force required by the driver to override the lateral assistance shall not exceed **50 N** at any point during system operation, including during lane centering, lane change execution, and curve negotiation.
 
-This requirement must cascade into:
+This requirement should be traced to:
 - EPS system requirement (chassis/steering domain)
 - DCAS software override detection threshold
+- Minor-correction vs. override-intent handling
 - EU validation test case
+- Measured steering effort results
 
 ---
 
 ## Open Questions
 
-1. What is the current EPS torque opposition during lane centering on G1.3 domestic variant? Has this been measured?
-2. Is there an existing override torque threshold in the EPS calibration, and what is its value?
-3. Does the current DCAS software distinguish between "driver micro-correction" and "driver override intent"? (R.171 allows minor corrections without full override — the 50 N limit applies to full override, not micro-corrections.)
+1. Does the detailed G1.3 可控性需求 ADRS explicitly include GB draft §4.8.2.7 / ≤50 N, or was it omitted from the extracted summary?
+2. What is the current EPS torque opposition during lane centering on G1.3 domestic variant? Has this been measured?
+3. Is there an existing override torque threshold in the EPS calibration, and what is its value?
+4. Does the current DCAS software distinguish between "driver micro-correction" and "driver override intent"? (R.171 allows minor corrections without full override — the 50 N limit applies to full override, not micro-corrections.)
+5. Do validation reports measure steering effort directly, or only verify that the vehicle eventually responds to steering intervention?

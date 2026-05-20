@@ -28,7 +28,7 @@
 | 1.1 | System off at every ignition | Not explicitly required; current cycle context assumed | §5.5.3.1: system shall be in 'off' mode at each new engine start/run cycle | **Missing** | Med | China counts per power-on cycle but doesn't mandate off-state at start; EU requires explicit off-state reset |
 | 1.2 | Activation preconditions | Speed ≥ Vsminset; road type (highway); lane marking detected | §5.5.3.2.2: driver in seat + belt fastened; DMS able to monitor; no active failure; within system boundary; safety systems functional | **Partial** | Med | China focuses on road/speed ODD; EU additionally mandates seatbelt check and DMS availability as hard preconditions |
 | 1.3 | Driver-initiated activation only | Implied (driver activates) | §5.5.3.2.1: only upon deliberate driver action (off→on) | Aligned | Low | — |
-| 1.4 | No auto-transition to sustained L/L control after driver turns off | Not explicitly addressed | §5.5.2.2: when system switched to off, no automatic transition to any system providing continuous lon/lat movement | **Missing** | High | Risk: after driver disables DCAS, system must not silently hand off to another combined-control mode. EU requires explicit prohibition. |
+| 1.4 | No auto-transition to sustained L/L control after driver turns off | GB draft §4.8.1.1.4: "驾驶员...使系统进入关闭状态后应不自动激活任何部分驾驶辅助系统" | §5.5.2.2: when system switched to off, no automatic transition to any system providing continuous lon/lat movement | **Traceability / Validation Gap** | Med | CN and EU substantively aligned at regulation level. Remaining risk: ADRS traceability and software state machine validation. |
 | 1.5 | Exit by driver at any time | System can be exited; RMF exception | §5.5.3.3.1: shall be possible to switch to 'off' at any time | Aligned | Low | — |
 | 1.6 | Graceful exit when preconditions no longer met | Goes to standby/exits; HMI prompt | §5.5.3.3.3: terminate in safe and timely manner → standby or off | Aligned | Low | — |
 
@@ -43,7 +43,7 @@
 | 2.3 | Visual disengagement definition | Eye gaze deviates from driving-relevant area | §5.5.4.2.5.2: eye gaze/head posture directed away from currently driving-task-relevant area; dashboard/instrument panel NOT a driving-task-relevant area | **Partial** | Med | EU explicitly excludes dashboard as driving-relevant area. China ADRS needs to confirm this exclusion is implemented. |
 | 2.4 | Re-engagement duration threshold | Not specified in ADRS documents reviewed | §5.5.4.2.5.2.1: re-engagement requires ≥200ms of gaze towards task-relevant area | **Missing** | Med | EU defines a minimum re-engagement duration. China ADRS does not specify this threshold. |
 | 2.5 | Multiple short gaze aversions handling | Not explicitly specified | §5.5.4.2.5.3: system shall address multiple subsequent short aversions (e.g., increased re-engagement time or immediate EOR) | **Missing** | Med | EU requires explicit strategy for "short blink" evasion. China ADRS silent on this. |
-| 2.6 | DMS unavailability → no lane departure | Not explicitly addressed | §5.5.4.2.1.2: if visual disengagement detection temporarily unavailable, system shall not lead vehicle to leave current lane | **Missing** | High | Critical safety gap: EU requires that if DMS fails, lateral control must be constrained to prevent lane departure. |
+| 2.6 | DMS unavailability → no lane departure | GB draft §4.8.3.1.1.3: "若系统确认视线脱离检测处于不可用状态，则系统应不通过非车道巡航控制功能使车辆离开本车道" | §5.5.4.2.1.2: if visual disengagement detection temporarily unavailable, system shall not lead vehicle to leave current lane | **Traceability / Validation Gap** | Med | CN and EU substantively aligned at regulation level. Remaining risk: ADRS traceability, software implementation, and validation evidence. |
 | 2.7 | DMS occlusion test | 9.4.9.6.4: occlusion test, EOR within 5s | R.171 §5.5.4.2: strategy documented and demonstrated; Annex 4 tests | Partial | Low | China has specific test; EU defers to manufacturer safety concept + Annex 4. Outcome-equivalent but documentation requirements differ. |
 
 ---
@@ -52,11 +52,11 @@
 
 | # | Topic | China L2GB | EU R.171 | Gap Type | Risk | Notes |
 |---|---|---|---|---|---|---|
-| 3.1 | Lateral override force limit | Not specified | §5.5.3.4.1.4: steering override effort ≤ 50 N | **Missing** | High | EU sets a hard 50 N cap on the effort needed to override lateral control. China ADRS has no corresponding limit. This is a controllability/human factors requirement. |
+| 3.1 | Lateral override force limit | GB draft §4.8.2.7 requires driver lateral intervention with steering effort ≤ 50 N; ADRS/software/test traceability not yet confirmed | §5.5.3.4.1.4: steering override effort ≤ 50 N | **Traceability / Validation Gap** | High | CN and EU are substantively aligned at regulation level. Remaining risk is whether G1.3 ADRS, EPS calibration, software override logic, and validation reports prove ≤50 N across lateral-control modes. |
 | 3.2 | Override: system may remain active | Implied (system stays active during temporary driver input) | §5.5.3.4.1: system may remain in active mode, priority given to driver input during overriding period | Aligned | Low | — |
 | 3.3 | Longitudinal override: hard braking | Driver braking overrides longitudinal assist | §5.5.3.4.1.1: driver brake input > system deceleration overrides and suspends longitudinal control | Aligned | Low | — |
 | 3.4 | Longitudinal resume after brake override | Resumes on driver action | §5.5.3.4.1.1.1: shall not resume lon. control without separate driver action; exception: speed reduction ≤30 km/h within 2s | **Partial** | Med | EU defines a specific exception (≤30 km/h / 2s) for minor brake inputs that allows auto-resume. China ADRS does not address this edge case. |
-| 3.5 | Lateral override not to terminate during motoric disengagement | Not addressed | §5.5.3.4.1.5: shall not terminate lateral control while driver is detected to be motorically disengaged (controllability during override) | **Missing** | High | EU prevents the dangerous scenario where override detection causes lateral control to suddenly stop while the driver's hands are off the wheel. |
+| 3.5 | Lateral override not to terminate during motoric disengagement | Not found in CN GB draft — GB §4.8.2.8 addresses override termination but does not constrain based on HOD state | §5.5.3.4.1.5: shall not terminate lateral control while driver is detected to be motorically disengaged (controllability during override) | **Missing** | High | Confirmed true regulatory gap. No CN equivalent found. EU prevents the dangerous scenario where override detection causes lateral control to suddenly stop while the driver's hands are off the wheel. |
 | 3.6 | Acceleration override | Driver accelerator input overrides longitudinal assist | §5.5.3.4.1.3: accelerator input > system acceleration overrides longitudinal assist; system resumes on current max speed basis | Aligned | Low | — |
 
 ---
@@ -75,7 +75,7 @@
 | 4.8 | EOR signal requirements | Optical + acoustic or tactile | §5.5.4.2.3.2.1: EOR = continual visual + at least one other modality (unless driver observed visual) | Aligned | Low | — |
 | 4.9 | DCA signal requirements | Optical + acoustic or tactile, clear prompt for lateral takeover | §5.5.4.2.3.3.1: visual + at least one other modality; clearly instruct driver to resume at least lateral control | Aligned | Low | — |
 | 4.10 | Manoeuvre inhibited during DDA warning | Not explicitly stated | §5.3.7.2.1.3: manoeuvre shall not be initiated if disengagement warning is active | **Missing** | Med | EU explicitly prohibits initiating any manoeuvre (e.g., lane change) while a disengagement warning is being issued. China ADRS silent. |
-| 4.11 | RMF lane change capability | RMF defined; lane change as part of RMF not specified | §5.3.7.3.2: if system has driver-confirmed/system-initiated lane change, RMF shall be capable of lane changes to reach target stop area (emergency lane) on highway | **Missing** | High | EU requires that if the system has lane change capability, its RMF must also be able to perform lane changes to reach a safe stop area. This is architecturally significant. |
+| 4.11 | RMF lane change capability | GB draft §4.6.3.1.1: "若系统具有驾驶员确认的换道控制功能或系统触发的换道控制功能，则RMF应至少具有在A类道路环境下执行换道控制的能力。" Target areas include 应急车道/硬路肩 (§4.6.3.1.2) | §5.3.7.3.2: if system has driver-confirmed/system-initiated lane change, RMF shall be capable of lane changes to reach target stop area (emergency lane) on highway | **Traceability / Validation Gap** | Med | CN and EU substantively aligned. Remaining risk: confirm G1.3 RMF module actually implements lane change to emergency lane; confirm GB §9.4.10.2.2 test result is applicable to EU validation. |
 
 ---
 
@@ -98,7 +98,7 @@
 
 | # | Topic | China L2GB | EU R.171 | Gap Type | Risk | Notes |
 |---|---|---|---|---|---|---|
-| 6.1 | System disable after repeated disengagement | 系统禁用 ADRS: disable for 30 min after: 1 RMF, or 2 escalated DCAs after EOR, or 3 escalated HOR/EOR in 30 min, or 10s continuous escalated HOR/DCA | §5.5.4.2.8.1: manufacturer shall implement strategies to disable activation for the run cycle when prolonged insufficient engagement leads to >1 driver unavailability response | **Conflict** | High | China: detailed quantitative triggers, 30-min disable. EU: principle-based — disable for run cycle after >1 RMF. EU does not specify 30 min; it requires run-cycle disable. China's 30-min may be shorter than EU's run-cycle requirement depending on context. |
+| 6.1 | System disable after repeated disengagement | GB draft §8.1: "被禁用不少于30 min" within current ignition cycle, triggered by: 1 RMF, 2 escalated DCAs after EOR, 3 escalated HOR/EOR in 30 min, or 10s continuous escalated HOR/DCA | §5.5.4.2.8.1: manufacturer shall implement strategies to disable activation for the run cycle when prolonged insufficient engagement leads to >1 driver unavailability response | **Conflict** | High | Confirmed conflict: CN specifies ≥30-min timer, allowing system re-enable within the same run cycle for long trips. EU requires disable for the entire remaining run cycle. On a 2-hour motorway trip, CN allows re-enable after 30 min; EU does not. Requires software architecture change for EU variant. |
 | 6.2 | Disable HMI: instruction to read manual | 系统禁用 ADRS: HMI shall prompt driver to read and understand system usage instructions | §5.5.4.2.8.1: strategies to disable (no specific HMI requirement on content) | **More Strict in CN** | Low | China more explicit on HMI content post-disable. EU leaves to manufacturer. No negative gap. |
 | 6.3 | Hardware/software tampering prevention | Not specified | §5.1.3: system shall guard against reasonably foreseeable misuse AND unauthorized modification of software/hardware | **Missing** | Med | EU requires explicit cybersecurity/tamper-resistance consideration for DCAS. China ADRS does not address this. |
 | 6.4 | Driver information materials | Product description (产品说明 ADRS) | §5.6: mandatory content list including: driver responsibilities, system capabilities/limits, boundaries, modes, privacy management, override instructions, HMI details | **Partial** | Med | EU §5.6(h) requires Privacy Management explanation — China ADRS does not have this. Also EU requires content to not mislead about automation level. |
@@ -128,7 +128,7 @@
 | 8.1 | Graceful degradation on failure | ODC failsafe: system safe stop on failure | §5.4.2: control assistance shall be terminated safely; shall gradually reduce if safe to do so | Aligned | Low | — |
 | 8.2 | Whole-system failure → off mode | System deactivates on critical failure | §5.4.2.1: if failure affects entire system, switch to off mode upon termination; optical failure warning for appropriate duration | Aligned | Low | — |
 | 8.3 | Partial failure: feature-level degradation | Not explicitly defined | §5.4.4: if failure only affects some features, system may continue with remaining features | **Missing** | Med | EU allows and defines partial-failure continued operation. China ADRS does not specify this feature-level resilience strategy. |
-| 8.4 | No auto-resume after AEBS intervention standstill | Not specified | §5.5.3.3.4: system shall not resume longitudinal control without driver input if vehicle comes to standstill following AEBS intervention | **Missing** | High | After emergency braking brings vehicle to stop, EU prohibits automatic resumption of longitudinal control. China ADRS does not address this. |
+| 8.4 | No auto-resume after AEBS intervention standstill | GB draft §4.8.1.3.3: "若在应急辅助功能（例如，AEBS）介入控制后导致车辆静止，在没有驾驶员人工操作的情况下，系统应不恢复纵向运动控制" | §5.5.3.3.4: system shall not resume longitudinal control without driver input if vehicle comes to standstill following AEBS intervention | **Traceability / Validation Gap** | Med | CN and EU are directly equivalent. Remaining risk: ADRS traceability and software state machine validation. |
 | 8.5 | Mandatory AEBS + LDWS/LDPS baseline | Not explicitly referenced | §5.1.5: DCAS-equipped vehicle shall have AEBS (R.131/R.152) and LDWS or LDPS (R.130/R.79) | **Partial** | Med | G1.3 likely has AEBS. EU type approval requires formal compliance declarations for all three underlying systems. |
 | 8.6 | No AEBS suppression during DCAS active | ODC failsafe addresses | §5.2.1: DCAS shall not deactivate or suppress longitudinal functionality of AEBS while in active mode | Aligned | Low | — |
 | 8.7 | Controllability of decel/accel during system actions | Not specified quantitatively | §5.3.6.3.1: deceleration and acceleration shall remain manageable for driver and surrounding traffic unless higher decel needed for safety | **Missing** | Med | EU requires controllability of longitudinal dynamics. China ADRS has no equivalent comfort/controllability constraint. |
@@ -139,14 +139,14 @@
 
 | # | Topic | China L2GB | EU R.171 | Gap Type | Risk | Notes |
 |---|---|---|---|---|---|---|
-| 9.1 | Lateral acceleration during lane change | Not specified | §6.2.3: lateral accel ≤ 1.5 m/s² (beyond curvature); total ≤ 3.5 m/s²; lateral jerk moving avg ≤ 5 m/s³ | **Missing** | High | EU defines specific quantitative limits for lateral dynamics during lane change. China ADRS has no equivalent. |
+| 9.1 | Lateral acceleration during lane change | GB §4.6.2.2.1.8: total ≤ 3.5 m/s², jerk ≤ 5 m/s³; §4.6.2.2.1.9: straight-road ≤ 1.5 m/s²; §4.6.2.2.1.11: decel ≤ 2 m/s² | §6.2.3: lateral accel ≤ 1.5 m/s² (beyond curvature, all roads); total ≤ 3.5 m/s²; lateral jerk moving avg ≤ 5 m/s³ | **Partial** | Med | Straight-road values identical. Gap: EU §6.2.3's "beyond curvature" constraint applies on curved roads too (delta accel from lane change ≤ 1.5 m/s²), but CN §4.6.2.2.1.9 only constrains straight roads. Curved-road lane change delta-lateral-accel is only bounded by the 3.5 m/s² total in CN. |
 | 9.2 | Direction indicator requirement | Not specified in ADRS | §6.2.6: system shall generate direction indicator signal; active throughout entire lane change; deactivated by system after | **Missing** | Med | EU mandates system-controlled direction indicator. China ADRS does not address this. |
 | 9.3 | Indicator advance notice to other road users | Not specified | §6.2.7: lane change indicated to other road users at least 3s before start of manoeuvre | **Missing** | Med | 3-second advance indicator requirement. No China equivalent. |
 | 9.4 | Target lane safety assessment | System checks target lane before lane change | §6.2.4: approaching vehicle shall not be forced to decelerate >3 m/s² at A seconds after start; specific formula with detection range | **Partial** | Med | China checks target lane is clear. EU defines specific quantitative safety criterion for approaching vehicle deceleration impact. |
 | 9.5 | Max time from initiation to start of manoeuvre | Not specified | §6.2.9.5: only permitted to extend beyond 7s where not in violation of national traffic rules | **Missing** | Low | EU caps the waiting time for lane change initiation at 7s. China ADRS does not specify. |
 | 9.6 | No lane change against opposing traffic | Implied | §6.2.2: lane change shall not be performed towards lane intended for traffic moving in opposite direction | Aligned | Low | — |
 | 9.7 | Lane change suppression notification | Not specified | §6.2.8: if lane change suppressed by system, inform driver with optical + acoustic/haptic | **Missing** | Low | When system decides not to perform a requested lane change, EU requires explicit driver notification. |
-| 9.8 | No lane change during disengagement warning | Not addressed | §5.3.7.2.1.3: manoeuvre shall not be initiated if disengagement warning is active | **Missing** | High | See also 4.10. Architecturally important: lane change must be blocked when any warning is active. |
+| 9.8 | No lane change during disengagement warning | GB draft §6.x(e): "若系统正在发出驾驶员脱离提示或警告信号，不触发换道过程" | §5.3.7.2.1.3: manoeuvre shall not be initiated if disengagement warning is active | **Traceability / Validation Gap** | Med | CN and EU are equivalent. Remaining risk: ADRS traceability, software implementation, and test coverage. Note: RMF lane change is exempt (RMF operates specifically under driver unavailability). |
 | 9.9 | Lane change near pedestrians/cyclists | Not addressed | §6.2.9.4: only permitted if system able to avoid causing risk of collision with vulnerable road users | **Missing** | Med | China ADRS does not address VRU detection as precondition for lane change. |
 | 9.10 | Deceleration during lane change limited | Not specified | §6.2.4.3: deceleration during lane change ≤ 2 m/s² (except for imminent collision avoidance) | **Missing** | Med | EU limits deceleration during lane change to protect trailing vehicles. |
 
@@ -166,19 +166,26 @@
 
 ## Summary: Risk-Ranked Gap List
 
-### High Risk (must resolve before EU type approval)
+> **Note (2026-05-20 re-review):** After checking all gaps against the full CN GB draft text, H2, H3, H5, H7, H8, H9 were found to have substantively equivalent requirements in the CN GB draft and have been reclassified. H4 (no CN equivalent found) and H6 (genuine timer vs. run-cycle conflict) remain High Risk.
 
-| # | Gap | Relevant R.171 §|
-|---|---|---|
-| H1 | Lateral override force ≤ 50 N not implemented | §5.5.3.4.1.4 |
-| H2 | DMS unavailability → no lane departure constraint missing | §5.5.4.2.1.2 |
-| H3 | No auto-transition prohibition after driver turns off DCAS | §5.5.2.2 |
-| H4 | Lateral control shall not terminate while driver is motorically disengaged (during override) | §5.5.3.4.1.5 |
-| H5 | RMF must be capable of lane change if system has lane change feature | §5.3.7.3.2 |
-| H6 | System disable: CN triggers 30 min disable; EU requires run-cycle disable (may be longer) | §5.5.4.2.8.1 |
-| H7 | No auto-resume longitudinal control after AEBS stops vehicle | §5.5.3.3.4 |
-| H8 | Lane change blocked when any disengagement warning is active | §5.3.7.2.1.3 |
-| H9 | Quantitative lateral acceleration limits during lane change (1.5/3.5 m/s², 5 m/s³ jerk) | §6.2.3 |
+### High Risk (true regulatory gap or implementation conflict — must resolve before EU type approval)
+
+| # | Gap | Relevant R.171 §| Status |
+|---|---|---|---|
+| H4 | Lateral control shall not terminate while driver is motorically disengaged (during override) — **no CN equivalent** | §5.5.3.4.1.5 | Missing in CN |
+| H6 | System disable: CN ≥30 min timer (re-enableable within same run cycle); EU requires run-cycle disable — **genuine conflict** | §5.5.4.2.8.1 | Conflict |
+
+### Medium Risk — Traceability / Validation Gaps (CN regulation aligned; implementation/evidence must be confirmed)
+
+| # | Gap | Relevant R.171 § | CN Reference |
+|---|---|---|---|
+| H1 | Lateral override force ≤ 50 N: ADRS/EPS/software/test traceability not confirmed | §5.5.3.4.1.4 | GB §4.8.2.7 |
+| H2 | DMS unavailability → no lane departure: ADRS and validation evidence needed | §5.5.4.2.1.2 | GB §4.8.3.1.1.3 |
+| H3 | No auto-transition after driver turns off: ADRS and state machine validation needed | §5.5.2.2 | GB §4.8.1.1.4 |
+| H5 | RMF lane change capability: implementation and test evidence needed | §5.3.7.3.2 | GB §4.6.3.1.1 |
+| H7 | No auto-resume after AEBS standstill: ADRS and validation evidence needed | §5.5.3.3.4 | GB §4.8.1.3.3 |
+| H8 | Lane change blocked during disengagement warning: ADRS and test coverage needed | §5.3.7.2.1.3 | GB §6.x(e) |
+| H9 | Curved-road lane change: EU "beyond curvature" ≤ 1.5 m/s² constraint not in CN for curved roads | §6.2.3 | GB §4.6.2.2.1.8/1.9 (straight-road only) |
 
 ### Medium Risk (requires adaptation or documentation)
 
@@ -225,19 +232,20 @@
 
 ## Key Architectural Implications for G1.3 EU Adaptation
 
-1. **Driver Override Torque Limit**: Steering system must be validated to ensure override effort ≤ 50 N. This requires HW/SW-level torque control verification.
+1. **Override Logic During Motoric Disengagement (H4 — True Gap)**: The DCAS software must not drop lateral control when override is detected while the driver's hands are still off the wheel. The override logic must require positive HOD confirmation before terminating lateral assistance. This is an architectural software change with no CN equivalent to guide from.
 
-2. **DMS Failure → Lateral Constraint**: When eye-gaze detection fails, the system architecture must prevent lane departures (not just warn). This may require a mode that constrains lateral authority.
+2. **System Disable: Run-Cycle vs. 30-Min (H6 — True Conflict)**: China's 30-min timer allows re-enable within the same run cycle. EU requires the system to stay disabled for the entire remaining run cycle. The EU variant requires a run-cycle disable flag (cleared only on power cycle), not a countdown timer.
 
-3. **RMF + Lane Change Integration**: If the EU variant includes driver-confirmed lane change, the RMF module must be extended to include autonomous lane changes towards emergency/slow lanes on highways.
+3. **ADRS Traceability Chain (H1, H2, H3, H5, H7, H8)**: Many requirements exist in the CN GB draft but may not be explicitly cascaded into the ADRS. Before EU type approval, all six traceability gaps need to be verified: ADRS → software requirement → implementation → validation test → test result.
 
-4. **Disable Duration**: China's 30-min disable needs to be re-evaluated against EU's run-cycle requirement. If a run cycle is <30 min, the EU requirement is actually less strict; if >30 min, it is stricter.
+4. **Curved-Road Lane Change Control (H9)**: The lane change controller must limit the manoeuvre-induced lateral acceleration to ≤ 1.5 m/s² even on curved roads. A curvature-aware control strategy is needed. Straight-road lane change values are already aligned.
 
 5. **Post-Market Surveillance Infrastructure**: EU R.171 requires an OEM-level monitoring program + annual reporting + DETA notifications. This is a product-lifecycle obligation, not just a type-approval one.
 
-6. **Lane Change Dynamics**: The quantitative limits (lateral accel, jerk, decel) require engineering validation and may require test track verification as part of Annex 4.
+6. **ADRS Source vs. GB Standard**: The original ADRS Feishu summary pages do not fully reflect all requirements in the underlying GB standard. When reviewing compliance evidence, the full CN GB draft text should be the authoritative source, not the ADRS Feishu summaries alone.
 
 ---
 
-*Analysis based on: CN L2GB ADRS Feishu wiki (11 topics), UN R.171 S2 (ECE/TRANS/WP.29/2025/65), UN R.79 04 series S6.*  
+*Analysis based on: CN L2GB ADRS Feishu wiki (11 topics), CN GB draft full text (智能网联汽车组合驾驶辅助系统安全要求，送审稿), UN R.171 S2 (ECE/TRANS/WP.29/2025/65), UN R.79 04 series S6.*  
+*2026-05-20: All 9 original High Risk gaps re-examined against CN GB draft full text. H2, H3, H5, H7, H8 reclassified from Missing→High to Traceability/Validation→Medium. H9 reclassified from Missing→High to Partial→Medium. H4 (no CN equivalent) and H6 (30-min vs. run-cycle conflict) confirmed High Risk.*  
 *Next step: Cross-reference with Euro NCAP Assisted Driving 2024/2025 protocol for NCAP-specific requirements beyond type approval.*
