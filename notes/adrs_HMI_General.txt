@@ -1,0 +1,38 @@
+L2GB ADRS - HMI（General）​
+This article discusses the overall HMI requirements for the L2GB system, including system status prompts, driver identity confirmation, 30-day user instruction confirmation, and time gap prompts, along with corresponding test suggestions. Key points include:​
+System status prompts : The system should provide clear and sufficient system status and motion control information to the driver, with optical signals being clearly visible even during the day.​
+Driver identity confirmation : After each vehicle power-on/ignition (excluding engine auto - start/stop), at least one of the following methods should be used to confirm if the driver has completed system training: system training confirmation, biometric recognition, or account login when the vehicle is stationary.​
+30 - day user instruction confirmation : The vehicle should provide a way for the driver to confirm reading and understanding the system instructions. Confirmation is only allowed when the vehicle is stationary, using methods like long - press or at least two purposeful operations. If the instructions change due to software upgrades or the driver hasn't confirmed in 30 days, confirmation is required before the next system activation.​
+Time gap prompts : The system should continuously prompt the current following time gap to the driver through optical signals or prompt the time gap setting when the system is activated or the setting changes.​
+Time gap prompt test : During road tests, confirm the time gap prompt method, which should be consistent with the "user instructions" and follow one of the methods in [4.6.1.11](4.6.1.11).​
+Driver identity confirmation test : When an untrained driver tries to activate the system, the function activation should be suppressed.​
+30 - day user instruction confirmation test : When the system instructions change or the driver hasn't confirmed in 30 days, a confirmation prompt should pop up when the vehicle is stationary. If the user doesn't confirm, the system activation is suppressed. ​
+c)若因软件升级导致系统使用说明发生变化，则在下一次系统激活前向驾驶员提供确认方式；​
+d)当检测到最迟30天驾驶员未进行确认，则在下一次系统激活前向驾驶员提供确认方式。​
+时距提示-L2GB-d-HMI​
+4.6.1.11 系统应至少通过光学信号向驾驶员持续提示当前的跟车时距，或在系统激活时和跟车时距设置变化时向驾驶员提示跟车时距设置。​
+测试建议​
+时距提示​
+测试用例：​
+在道路测试过程中，确认时距提示方式​
+通过条件：​
+时距提示同「用户说明」一致​
+时距提示采用4.6.1.11​L2GB ADRS - HMI（General）中的方式其中之一​
+驾驶员身份确认​
+测试用例：​
+由未完成培训的驾驶员激活系统​
+通过条件：​
+功能激活被抑制​L2GB ADRS - 系统激活​
+30天用户说明确认​
+测试用例 1：​
+系统使用说明发生变化​
+通过条件：​
+车辆静止状态时，弹出用户说明确认​
+确认方式为长按保持或至少两个有目的操作​
+若用户未确认，功能激活被抑制​L2GB ADRS - 系统激活​
+测试用例 2：​
+超过30天驾驶员未进行确认​
+通过条件：​
+车辆静止状态时，弹出用户说明确认​
+确认方式为长按保持或至少两个有目的操作​
+若用户未确认，功能激活被抑制​L2GB ADRS - 系统激活​

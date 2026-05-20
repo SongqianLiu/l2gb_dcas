@@ -1,0 +1,21 @@
+L2GB ADRS - 可控性需求​
+This article discusses the controllability requirements, testing suggestions, and related regulations for the L2GB ADRS system, including longitudinal and lateral acceleration limits, control assistance, driver warning, and system exit conditions. Key points include:​
+Longitudinal acceleration limits : Braking deceleration threshold should not exceed -8m/s², and the frequency of false heavy braking should meet QA requirements. Acceleration threshold should not exceed 2m/s² (refer to ISO - 15622 - 2018).​
+Lateral acceleration limits : The system - declared maximum lateral acceleration is no more than 3m/s². In most cases, the vehicle's lateral acceleration during system activation should not exceed the manufacturer - declared maximum by 0.3m/s², with different limits for different vehicle classes.​
+Lateral acceleration change rate : The average change rate of vehicle lateral acceleration within any 0.5s should not exceed 5m/s³.​
+Control assistance and warning : When certain conditions are met, the system should provide control assistance and signal the driver through optical, acoustic, or tactile signals.​
+System exit requirements : The system should be controllable for the driver in cases such as system failure, reaching or approaching the ODD boundary, or canceling non - lane cruise control.​
+Test suggestions : For lane cruise control's bend test, specific site and test requirements are provided, including different test scenarios based on the vehicle's bend - deceleration ability and test passing criteria.​
+Speed range for system operation : The system's design operating speed range should be greater than 120kph, and it should exit the active state with prior warning in case of driver - induced overspeed. ​
+测试要求​
+9.4.2.2依据试验车辆的弯道减速通行能力是否可被关闭进行9.4.2.3或9.4.2.4中的一个试验。若车辆制造商依据附录C声明的系统可处于激活状态的车速区间中存在两个或两个以上不同速度区间最大横向加速度相同的情况，则仅进行存在上述情况的多个速度区间中的一个试验即可。​
+​
+9.4.2.4若试验车辆的弯道减速通行能力不可被关闭，则在其开启状态下进行以下弯道试验：​
+a)在车辆制造商声明的系统可处于激活状态的全部车速区间中，各选择一个会引起车辆横向加速度为声明最大横向加速度的80%～90%的试验车速和RBC，并以此试验车速和RBC进行试验。试验人员执行车辆制造商规定的系统激活方式，并设置符合上述要求的车速为巡航车速，试验车辆达到巡航车速进入弯道后试验开始，试验过程中将试验车辆的速度始终保持为此巡航车速，试验车辆通行驶出试验弯道后试验结束。试验结束前，试验人员不干预车辆横向行驶控制；​
+b)在车辆制造商声明的系统可处于激活状态的全部车速区间中，各选择一个会引起车辆横向加速度高于声明最大横向加速度的0.3m/s2以上的试验车速和RBC，并以此试验车速和RBC进行试验。试验人员执行车辆制造商规定的系统激活方式，并设置符合上述要求的车速为巡航车速，试验车辆在达到巡航车速进入弯道后试验开始，试验过程中将试验车辆的速度始终保持为此巡航车速，试验车辆行驶出试验弯道或偏离出本车道后试验结束。试验结束前，试验人员不干预车辆横向行驶控制；​
+c)在车辆制造商声明的系统可处于激活状态的全部车速区间中，选择一个会引起车辆横向加速度大于3m/s2的试验车速和RBC，并以此试验车速和RBC进行试验。试验人员执行车辆制造商规定的系统激活方式，并设置符合上述要求的车速为巡航车速，试验车辆在达到巡航车速进入弯道后试验开始，试验过程中将试验车辆的速度始终保持为此巡航车速，试验车辆行驶出试验弯道或偏离出本车道后试验结束。试验结束前，试验人员不干预车辆横向行驶控制。注：若试验车辆的最大横向加速度无法超过3m/s2，则不进行9.4.2.3c）或9.4.2.4c）试验。​
+测试通过标准​
+试验 a) : 车辆保持巡航速度通过弯道，不偏离出本车道。过程中各项指标满足本文章节1的规定。​
+试验 b) : 在试验过程中各项指标满足1的规定；若发生车道偏离，报警与提示满足1.3.2的规定。”​
+试验 c) : 在试验过程中各项指标满足1的规定；若发生车道偏离，报警与提示满足1.3.2的规定。”​
+​

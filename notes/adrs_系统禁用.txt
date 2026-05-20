@@ -1,0 +1,27 @@
+L2GB ADRS - 系统禁用​
+This article discusses the system disablement requirements and test suggestions for L2GB ADRS. Key points include:​
+Disablement trigger conditions: In the current vehicle power-on/ignition cycle (excluding engine automatic start-stop), when any of the following situations occur due to driver disengagement, the pilot combined driving assistance system, basic single-lane combined driving assistance system, and basic multi-lane combined driving assistance system should be disabled for at least 30 minutes: a) The system triggers 1 RMF; b) If there is no RMF, the system continuously issues an upgraded HOR or DCA for 10 seconds; c) The system issues 2 upgraded DCAs after EOR; d) The system issues 3 upgraded HORs or upgraded EORs within any 30 minutes. The system count should be reset after disablement.​
+Disablement HMI: If the system is disabled due to driver disengagement in the current vehicle power-on/ignition cycle (excluding engine automatic start-stop), the system should prompt the driver to read and understand the system usage instructions.​
+Multiple hand disengagement system disablement test: Conducted under daytime conditions on a long straight road with at least two lanes in one direction and a dashed middle lane line. Select an adult meeting specific physical requirements as the test subject. The test vehicle drives at a cruising speed of the larger value between 60 km/h and Vsminset. The subject disengages hands from the steering wheel and repeats the operation 3 times within 30 minutes after the system HOR is upgraded. The function should be disabled for 30 minutes, and the HMI should prompt the driver to read and understand the instructions.​
+Multiple line-of-sight disengagement system disablement test: Similar test conditions as above. The subject keeps eyes closed while holding the steering wheel and repeats the operation 3 times within 30 minutes after the system EOR is upgraded. The function should be disabled for 30 minutes, and the HMI should prompt the driver to read and understand the instructions.​
+System disablement test after RMF: Similar test conditions. The subject keeps eyes closed while holding the steering wheel until the system issues DCA, then regains control of the vehicle and repeats until DCA is issued again. The function should be disabled for 30 minutes, and the HMI should prompt the driver to read and understand the instructions. ​
+9.4.9.7.1.2选择1名无面部、眼部缺陷，符合GB/T10000—2023中18岁～60岁组身高、坐姿眼高、形态面长尺寸百分位数为P10～P90要求的成年人作为试验人员。试验人员未佩戴眼镜、帽子、口罩等面部遮挡物，且除眉毛外，面部无明显毛发。​
+9.4.9.7.1.3试验车辆以60km/h与Vsminset中的较大值为巡航车速沿车道行驶后激活系统试验开始。试验开始后，试验人员双手脱离转向盘同时保持视线注视前方，系统HOR升级后，试验人员立即手握转向盘使HOR解除，在30min内，重复上述操作3次。此后试验人员按照车辆制造商定义的方式激活系统，试验结束。​
+通过条件：​
+功能禁用30min​
+HMI符合包含提示驾驶员阅读并理解系统使用说明​
+9.4.9.7.2多次视线脱离系统禁用试验​
+测试用例：​
+9.4.9.7.2.1在日间条件下，试验道路至少为单向双车道的长直道，中间车道边线为虚线。9.4.9.7.2.2选择1名无面部、眼部缺陷，符合GB/T10000—2023中18岁～60岁组身高、坐姿眼高、形态面长尺寸百分位数为P10～P90要求的成年人作为试验人员。试验人员未佩戴眼镜、帽子、口罩等面部遮挡物，且除眉毛外，面部无明显毛发。9.4.9.7.2.3试验车辆以60km/h与Vsminset中的较大值为巡航车速沿车道行驶后激活系统试验开始。试验开始后，试验人员手握转向盘的同时保持闭眼，系统EOR升级后，试验人员立即注视前方使EOR解除，在30min内，重复上述操作3次。此后试验人员按照车辆制造商定义的方式激活系统，试验结束。​
+通过条件：​
+功能禁用30min​
+HMI符合包含提示驾驶员阅读并理解系统使用说明​
+9.4.9.7.3发出RMF后的系统禁用试验​
+测试用例：​
+9.4.9.7.3.1在日间条件下，试验道路至少为单向双车道的长直道，中间车道边线为虚线。​
+9.4.9.7.3.2选择1名无面部、眼部缺陷，符合GB/T10000—2023中18岁～60岁组身高、坐姿眼高、形态面长尺寸百分位数为P10～P90要求的成年人作为试验人员。试验人员未佩戴眼镜、帽子、口罩等面部遮挡物，且除眉毛外，面部无明显毛发。​
+9.4.9.7.3.3试验车辆以60km/h与Vsminset中的较大值为巡航车速沿车道行驶后激活系统试验开始。试验开始后，试验人员手握转向盘的同时保持闭眼直至系统发出DCA，此后试验人员恢复对车辆的控制，并重复上述操作直至再次发出DCA。此后试验人员按照车辆制造商定义的方式激活系统，试验结束。​
+通过条件：​
+功能禁用30min​
+HMI符合包含提示驾驶员阅读并理解系统使用说明​
+​

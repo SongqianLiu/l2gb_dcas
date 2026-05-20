@@ -1,0 +1,20 @@
+L2GB ADRS - Lane Change​
+This article discusses the lane change requirements and test suggestions for the L2GB ADRS system, including general requirements, safety, turn signal control, acceleration limits, cancellation, inhibition, and different types of lane change scenarios. Key points include: ​
+General requirements：The system should meet the exit and quality index requirements for lane changes, including not entering the lane change execution phase at solid lane lines, not changing lanes to oncoming lanes, maintaining continuous lateral movement, and not changing two or more lanes continuously.​
+Safety requirements：Lane changes should meet the requirements of rationality and safety, including passing the field test specified in the "Lane Change Test" section, and ensuring that the deceleration of the following vehicle does not exceed 3m/s².​
+Turn signal control：The turn signal should be turned on before the lane change execution process, remain on during the lane change, and be turned off or a lane change completion prompt signal should be issued after the lane change is completed.​
+Acceleration limits：The lateral acceleration during the lane change execution phase should not exceed 3.5m/s², and the average value of the lateral acceleration change rate within any 0.5s should not exceed 5m/s³. The longitudinal deceleration should not exceed 2m/s² except to avoid or mitigate an imminent collision risk.​
+Cancellation and inhibition：The driver can cancel the lane change at any time through a single operation. The system should not trigger a lane change if certain conditions are not met.​
+Driver interaction：The driver can trigger a lane change through the turn signal lever, and a single lever turn can only perform a single lane change. The system should obtain the driver's confirmation before changing lanes, except in special circumstances.​
+Test suggestions：The article provides test scenarios and passing conditions for different types of lane changes, including driver-triggered, driver-confirmed, and system-triggered lane changes, as well as vehicle target detection and response ability tests. ​
+9.4.6.3.2试验车辆以Vsmaxset的车速沿右侧车道行驶，干扰车辆在左侧相邻车道行驶且始终处于符合GB/T39265—2020中5.1.1的试验车辆盲区内，试验车辆前方同车道有车辆目标以（Vsmaxset-40）km/h行驶，试验车辆与前方同车道低速车辆目标距离至少200m时激活系统试验开始。注：若9.4.4试验由车辆制造商提供触发驾驶员确认的换道控制功能的试验场景及试验参数，则本试验采用对应的试验场景及试验参数，干扰车辆在试验车辆的相邻目标换道车道且始终处于符合GB/T39265—2020中5.1.1的试验车辆盲区内​
+9.4.6.3.3当达到以下任一条件时试验结束：a)试验车辆跟随前方同车道低速车辆行驶后20s；b)试验车辆进入换道执行阶段。​
+试验通过条件 ​
+试验车辆跟随前方同车道低速车辆行驶后20s。​
+相邻车道有干扰车辆的系统触发的换道试验​
+试验场景​
+9.4.6.4.1如图11所示，在日间条件下，试验道路至少为单向双车道的长直道，中间车道边线为虚线，试验车辆与前方低速车辆目标均行驶在右侧同一车道，且左侧车道存在并行干扰车辆。​
+9.4.6.4.2试验车辆以Vsmaxset的车速沿右侧车道行驶，干扰车辆在左侧相邻车道行驶且始终处于符合GB/T39265—2020中5.1.1的试验车辆盲区内，试验车辆前方同车道有车辆目标以（Vsmaxset-40）km/h行驶，试验车辆与前方同车道低速车辆目标距离至少200m时激活系统试验开始。注：若9.4.5试验由车辆制造商提供系统触发的换道控制功能的试验场景及试验参数，则本试验采用对应的试验场景及试验参数，干扰车辆在试验车辆的相邻目标换道车道且始终处于符合GB/T39265—2020中5.1.1的试验车辆盲区内。​
+9.4.6.4.3当达到以下任一条件时试验结束：a)试验车辆跟随前方同车道低速车辆行驶后20s；b)试验车辆进入换道执行阶段。​
+试验通过条件 ​
+试验车辆跟随前方同车道低速车辆行驶后20s。​

@@ -1,0 +1,44 @@
+L2GB ADRS - ODC-场景（WIP）​
+This article discusses the requirements, capabilities, testing suggestions, and test cases for the L2GB ADRS - ODC scenario, especially focusing on intersection and roundabout functions. Key points include:​
+Intersection requirements : If the pilot combined driving assistance system includes urban scenarios, it should have intersection passing function, at least straight - through ability, and be able to recognize and respond to applicable traffic signals.​
+Roundabout capabilities : The roundabout passing function should have the ability to enter, circulate, and exit, and pass the roundabout passing requirement test.​
+Testing suggestions : Vehicle manufacturers should verify ODC elements, and road test road selection should cover various ODD elements such as different road types and traffic markings.​
+Passing conditions : In the functional activation state, pass the above scenarios without collision risk, and have proper prompts when approaching or exceeding the ODD boundary.​
+Roundabout test case setup : In the daytime, the test road is a roundabout with at least 3 entrances and exits, at least 2 lanes inside, and each entrance is at least two - way single - lane. There are moving and stationary vehicle targets.​
+Test process : The test vehicle reaches a stable speed of Vsmaxset at least 150 m from the roundabout center, conducts pre - tests, and then starts the formal test. The test ends under specific conditions.​
+Passing criteria : The vehicle should exit at exit 2 or 3 of the roundabout and not collide with the vehicle target. ​
+4.3.3 车辆制造商应至少针对 4.3.1 涉及的 ODC 元素进行验证。​
+道路试验​
+QA路测准出道路选择需要包含以下ODD元素​
+道路类型​
+高速公路以 - 高快​
+城市快速路 - 高快​
+城市道路 - 城区​
+公路 - 城区​
+乡村道路 - 城区​
+无车道线道路 - 城区​
+道路交通标线类型​
+GB 5768.3表1中橙色和蓝色之外的车道线类型​
+若支持B类道路​
+让行标线（例如，人行横道线等）​
+停止标线​
+仅适用于其他特定交通参与者的车道​
+收费站 - 高快​
+匝道 - 高快​
+隧道 - 高快/城区​
+交叉口 - 城区​
+环岛 - 城区​
+通过条件：​
+在功能激活状态下通过以上场景​
+通过过程无碰撞风险​
+接近或超出ODD边界是否有提示，提示是否符合「用户手册」及本文需求2 「超出、即将超出或正在接近 ODD 边界时提示驾驶员的策略」​
+L2GB ADRS - ODC-场景（WIP）​
+环岛​
+测试用例：​
+7.5.2.1如图26所示，在日间条件下，试验道路为包含不少于3个出入口的环岛，环岛内至少包含两条车道，环岛每个出入口至少为双向单车道，试验车辆入口上游存在移动车辆目标，下游第一个入口存在静止车辆目标。7.5.2.2试验人员根据系统进行设置，确保车辆在环岛的出口2或出口3驶出。​
+7.5.2.3试验车辆在系统激活状态下，在距离环岛中心至少150 m时达到Vsmaxset稳定行驶，并在无移动车辆目标的情况下进行三次预试验，计算三次试验车辆行驶路径与移动车辆目标路径的预计碰撞点的平均值作为试验的碰撞点。​
+7.5.2.4试验车辆在系统激活状态下，以Vsmaxset为巡航车速沿试验道路稳定行驶，在距离环岛中心至少150m时试验开始，当试验车辆到达环岛入口时，移动车辆目标在入口上游以15 km/h的速度匀速行驶并计划于出口1驶出。​
+7.5.2.4.1当达到以下任一条件时，试验结束：​
+a)试验车辆与车辆目标产生碰撞；​
+b)试验车辆驶出环岛；​
+c)试验车辆未按预定路线驶出环岛。​

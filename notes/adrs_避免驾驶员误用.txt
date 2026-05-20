@@ -1,0 +1,35 @@
+L2GB ADRS - 避免驾驶员误用​
+This article discusses the requirements of the L2GB ADRS system to avoid driver misuse, including system state definitions, design requirements, trigger conditions, and test suggestions. Key points include:​
+System state definitions : The system has four states: active state (the system or function assists the driver in controlling the vehicle's lateral and longitudinal movements), standby state (the system or function does not perform any lateral or longitudinal motion control), on state (the system or function can be used to assist the driver, including standby or active states), and off state (the system is prevented from assisting the driver).​
+Design to prevent misuse : The system's design should effectively handle foreseeable driver misuse, and the design of activation and exit operations should prevent such misuse.​
+Preventing false activation : When detecting beyond the system's ODD boundary or when the driver accidentally presses the Hero button, the system should not be activated and should issue an obvious driver reminder.​
+Test conditions for false intervention : In daytime, on a long - straight road with at least one - way two - lane and a dotted middle lane line, the test vehicle activates the system while cruising at Vsmaxset, then accelerates to (upper limit of design operating speed range + 5) km/h.​
+Test end conditions : The test ends when either the system of the test vehicle exits or the vehicle maintains a speed of (upper limit of design operating speed range + 5) km/h for 5s.​
+Passing conditions : The system should exit the active state before the end of the test, and the HMI prompt should match the "User Manual" and include a continuous optical prompt signal.​
+Trigger conditions list : There are trigger conditions such as false intervention, misuse after activation, and false activation. ​
+4.8.1.1.1系统激活和退出操作方式的设计应防止可合理预见的驾驶员误用。​
+表C.2触发条件列表​
+误干预​
+当驾驶员加速干预超过设计运行车速上限，系统应退出​
+激活后误用​
+​L2GB ADRS - HOR​
+​L2GB ADRS - EOR​
+误激活​
+当探测到超出系统 ODD 边界时，当驾驶员误按Hero button，系统不应被激活，并发出明显的驾驶员提醒（例如文字提示）​L2GB ADRS - 系统激活​
+测试建议​
+误干预/超出设计运行车速范围​
+测试用例：​
+9.4.8.1.1 如图17所示，在日间条件下，试验道路至少为单向双车道的长直道，中间车道边线为虚线。​
+9.4.8.1.2 试验车辆以Vsmaxset为巡航车速沿车道行驶后激活系统试验开始，试验人员控制试验车辆加速至（设计运行车速范围上限+5）km/h。​
+9.4.8.1.3当达到以下任一条件时试验结束：​
+a)试验车辆的系统退出；​
+b)试验车辆车速维持（设计运行车速范围上限+5）km/h行驶5s。​
+​
+通过条件：​
+系统于试验结束前退出激活状态；​
+HMI提示和「用户手册」吻合，且包含持续光学提示信号​
+激活后误用​
+​L2GB ADRS - HOR​
+​L2GB ADRS - EOR​
+误激活​
+​

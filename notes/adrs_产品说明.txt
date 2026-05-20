@@ -1,0 +1,37 @@
+L2GB ADRS - 产品说明​
+This article presents the product description of L2GB ADRS, including requirements from GB7258 and details about system usage instructions and product specifications. Key points include:​
+Chinese requirement in product manual: All text in the motor vehicle's product instruction manual should be in Chinese according to GB7258 4.16.14.​
+System usage instruction provision: Vehicle manufacturers with combined driving - assistance systems should provide system usage instructions publicly, such as via official websites, in - vehicle displays, or mobile devices.​
+Content of system usage instruction: It should be concise and cover aspects like system category, driver's responsibility, correct usage, system's assistance mode, capabilities and limitations, ODD boundary, system states, and more.​
+Product specification details: According to GB7258 4.16.13, it should include the number and installation location of sensors like cameras and radars, and the data extraction method of the combined driving - assistance data recording system.​
+Driver - related information: Information about driver's responsibility, correct usage, and driver -脱离 detection (including detection methods and warning signals) should be provided.​
+Interaction and emergency: Details about human - machine interaction (activation, exit, and status prompts) and emergency handling in case of accidents are required.​
+Risk and compatibility: For multi - user management and vehicles with trailer - compatible systems, relevant risk descriptions and compatibility requirements should be provided. ​
+7.2系统使用说明的表述应简洁易懂、准确，易于一般使用者阅读和理解，且应至少包括以下内容：​
+b)驾驶员责任；​
+c)驾驶员正确使用系统的方式；​
+d)系统及其功能辅助驾驶员控制车辆的方式；​
+e)系统的能力与局限性；​
+GB7258 4.16.13： 包括具备的行车辅助功能、可识别的目标物类型和限制使用的场景条件等；​
+f)系统ODD边界；​
+g)系统状态及状态转换；​
+h)系统与其他驾驶自动化系统的转换（如有）；​
+i)跟车时距或跟车时距设置含义；​
+j)系统的设计运行车速范围、允许驾驶员设置的最高运行车速和最低运行车速；​
+k)驾驶员脱离检测，包括脱离检测方式、脱离提示信号和警告信号；​
+l)人机交互：​
+1)激活和退出操作方式；​
+2)运动控制干预方式；​
+3)系统及其功能相关的状态提示，包括各类光学、声学和触觉信号；​
+4)系统探测到已超出、即将超出或正在接近系统ODD边界或功能边界时的提示；​
+5)系统或功能发生失效后的提示；​
+m)使用系统时发生事故的应急处置方法；​
+n)对于支持多用户管理的车辆，对使用系统的相关风险说明（例如，车辆移交前需登出当前账号）；​
+o)对于可在挂接挂车的情况下激活系统的车辆，对系统所适配的挂车要求的说明（例如，外廓尺寸、最大允许总质量、制动性能）以及使用系统的相关风险说明（例如，需要驾驶员确保挂车符合车辆制造商说明的要求）。​
+产品说明-L2GB-d-Manual​
+GB7258 4.16.13​
+o) 系统的摄像头、毫米波雷达、激光雷达、超声波雷达等传感器的数量和安装位置图；​
+p) 组合驾驶辅助数据记录系统的数据提取方式。​
+测试建议​
+用户说明review，是否包含要求中的内容​
+​

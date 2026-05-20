@@ -1,0 +1,36 @@
+L2GB ADRS - TLD​
+This article discusses the requirements, system examples, and test suggestions for a system related to the recognition and response of road traffic signals. Key points include:​
+System requirements : The system should be able to recognize and respond to applicable road traffic signals (e.g., vehicle traffic lights, direction indicators), and make safe responses to detected traffic signals, yield markings, stop lines, and lanes for specific traffic participants.​
+Signal recognition and response : The system can recognize and respond to vehicle traffic lights, direction indicator lights, U - turn lights, and crossing lights, but does not recognize or respond to non - motor vehicle lights, pedestrian crosswalk lights, and lane lights.​
+Test conditions : The test is carried out under daytime conditions on a cross - shaped intersection with at least two - way single - lane and traffic lights for vehicle recognition. The test vehicle travels at a speed of Vsmaxset, and the traffic lights are initially red. The test starts when the vehicle is at least 150m away from the intersection, and the lights turn green after the vehicle stops.​
+Passing conditions : The test vehicle should pass through the intersection and cruise along the lane. ​
+1​
+机动车信号灯​
+识别并响应​
+2​
+方向指示信号灯​
+识别并响应​
+3​
+掉头信号灯​
+识别并响应​
+4​
+非机动车信号灯​
+不识别，不响应​
+​
+5​
+人行横道信号灯​
+不识别，不响应​
+6​
+车道信号灯​
+不识别，不响应​
+7​
+道口信号灯​
+识别并响应​
+*：仅示例，信号灯详细规格要求见「GB_14886_2016 道路交通信号灯设置与安装规范」grp.nioint.com​
+测试建议​
+测试用例：​
+9.5.3.1如图26所示，在日间条件下，试验道路为至少包含双向单车道的十字形交叉口且设置有供车辆识别的信号灯。​
+9.5.3.2试验车辆以Vsmaxset的车速沿试验道路行驶，供车辆识别的信号灯初始状态为红灯。在试验车辆距离十字形交叉口至少150m时激活系统试验开始，在试验车辆停止后，供车辆识别的信号灯由红色变为绿色。​
+通过条件：​
+9.5.3.3  a)试验车辆通过交叉口并沿车道巡航行驶；​
+​

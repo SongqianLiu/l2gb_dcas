@@ -1,0 +1,31 @@
+L2GB ADRS - ODC-failsafe​
+This article discusses the requirements and test suggestions for the ODC elements of vehicle systems and functions, including descriptions of different road environments, ODD boundary instructions, and various test scenarios. Key points include:​
+ODC element requirements : Vehicle manufacturers should describe ODC elements according to GB/T 45312. For A - class roads, elements include traffic markings, signs, etc.; for B - class roads, more elements like traffic signals and intersections are included.​
+ODD boundary instructions : Manufacturers should provide instructions on ODD boundaries, including detectable boundaries, detection methods, strategies for warning drivers when approaching or exceeding boundaries, and explanations for undetectable boundaries.​
+Road environment definitions : A - class roads are highways and expressways, while B - class roads are other road environments.​
+Test conditions : Day - time test illumination should be at least 2000lx, and night - time background illumination should be at most 5lx. Rain tests are conducted at 20mm/h rainfall (±10% error), and fog tests are at 150m visibility (±10% error).​
+Driver warning strategies : When approaching ODD boundaries, a warning signal should be sent; when exceeding, a DCA should be issued, including optical, acoustic, and tactile warnings until the driver regains control or RMF is triggered.​
+Test suggestions : Manufacturers should verify ODC elements in 4.3.1. Different test scenarios, such as day/night, rain, and fog, have specific test cases and passing conditions.​
+Safety measures validation : In tests like the day - time rain side - rolled vehicle test and day - time fog oblique vehicle test, the effectiveness and consistency of safety measures should be confirmed, and the vehicle should avoid collisions or limit collision speed to 10km/h. ​
+雾天​
+通过条件：​
+车辆激活状态和ODD边界描述吻合​
+DCA交互和「用户说明」吻合​
+C.3.3.2.3.18日间雾天斜置车辆试验​
+测试用例：​
+如图C.13所示，试验道路至少为单向双车道的道路，中间车道边线为虚线，右侧车道有静止的斜置车辆目标，车辆目标纵向中心线与车道中心线呈30°夹角，车辆目标最后端位于雾天区域入口100m。​
+在日间环境下，以雾天能见度150m（误差不超过10%）的降雾条件开展试验。如按照9.4.8.4进行试验，试验车辆驶出雾天区域前发出DCA，则无须开展本试验。​
+如车辆制造商针对不同雾天条件有相应安全措施和安全策略（例如降速后稳定运行），则根据C.2.5安全措施和安全策略说明、C.2.9预期功能安全验证确认计划和结果等相关文档进行预试验，确认实施安全措施和安全策略后的试验车速。由于试验通道条件原因无法通过预试验确认该试验车速，则根据企业文档中声明的实施降速策略后的车速作为试验车速。​
+试验车辆以Vsmaxset或实施降速策略后的车速沿有斜置车辆目标的车道行驶并距斜置车辆车尾至少200m时激活系统试验开始。​
+通过条件：​
+试验过程中，确认车辆采取的相关安全措施和安全策略（例如提前减速、换道、绕行、发出驾驶员提醒、考虑合理的驾驶员反应时间等）的有效性和一致性，车辆在试验人员未干预系统的情况下未与其他目标物发生碰撞或碰撞速度不超过10km/h。​
+​
+
+
+
+
+
+
+
+
+​
