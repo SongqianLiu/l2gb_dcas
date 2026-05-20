@@ -1,0 +1,228 @@
+
+=== PAGE 1 ===
+ 
+GE.24-24118  (E) 
+Economic Commission for Europe 
+Inland Transport Committee 
+World Forum for Harmonization of Vehicle Regulations 
+195th session 
+Geneva, 4–7 March 2025 
+Item 4.7.7 of the provisional agenda 
+1958 Agreement: 
+Consideration of draft amendments to existing 
+UN Regulations submitted by GRVA 
+Proposal for Supplement 12 to the 03 series of amendments to 
+UN Regulation No. 79 (Steering equipment)  
+ 
+ 
+Submitted by the Working Party on Automated/Autonomous and 
+Connected Vehicles* 
+ 
+The text reproduced below was adopted by the Submitted by the Working Party on 
+Automated/Autonomous and Connected Vehicles (GRVA) at its twentieth session 
+(ECE/TRANS/WP.29/GRVA/20, para. 74). It is based on informal document GRVA-20-38. 
+It is submitted to the World Forum for Harmonization of Vehicle Regulations (WP.29) and 
+to the Administrative Committee (AC.1) for consideration at their March 2025 sessions.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+* In accordance with the programme of work of the Inland Transport Committee for 2025 as outlined in 
+proposed programme budget for 2025 (A/79/6 (Sect. 20), table 20.6), the World Forum will develop, 
+harmonize and update UN Regulations in order to enhance the performance of vehicles. The present 
+document is submitted in conformity with that mandate. 
+United Nations 
+ECE/TRANS/WP.29/2025/12
+ 
+Economic and Social Council 
+Distr.: General 
+19 December 2024 
+Original: English 
+6-05-20 19:32:26
+26-05-20 19:32:26
+26-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+
+=== PAGE 2 ===
+ECE/TRANS/WP.29/2025/12 
+2 
+ 
+Paragraph 1.2.3., shall be deleted: 
+Paragraph 4.4.3., amend to read: 
+“4.4.3. 
+a letter “X” preceding the approval number in the case when either: 
+(a) 
+ACSF of Category B1 or C have been exempted from the technical 
+requirements of this UN Regulation according to paragraph 5.6.2. and/or 5.6.4.  
+(b) 
+The steering system exhibits functionality defined as ACSF of Category 
+B2, D or E.” 
+Paragraph 5.6.5., amend to read: 
+“5.6.5. 
+Vehicles equipped with systems exhibiting the functionality defined as ACSF 
+of Category B2, D or E shall not be approved according to this UN Regulation, 
+unless the vehicle is equipped with a DCAS which: 
+(a) 
+Incorporates the function(s), and 
+(b) 
+Allows the activation of the function(s) only during operation and as 
+part of DCAS, and 
+(c) 
+Complies with the technical requirements and transitional provisions of 
+UN Regulation No. 171. 8” 
+Footnote 8, amend to read: 
+“8 Contracting Parties who do not apply UN Regulation No. 171 are not obliged to 
+accept approvals to UN Regulation No. 79 for vehicles with systems which exhibit the 
+functionality defined as ACSF of Category B2, D or E, or for vehicles which do not 
+comply in full with the technical requirements for ACSF in this UN Regulation.” 
+Annex 1, 
+Amend paragraph 6.5, to read: 
+“6.5. 
+Vehicle is equipped with a steering system which exhibits functionality 
+defined as an ACSF of Category B2, D or E:  
+yes/no” 
+ 
+Annex 2, amend to read: 
+“Annex 2 
+Arrangements of approval marks 
+Model A 
+(See paragraph 4.4. of this Regulation) 
+ 
+ 
+ 
+a = 8 mm min 
+ 
+The above approval mark affixed to a vehicle shows that the vehicle type concerned 
+has, with regard to steering equipment, been approved in the Netherlands (E 4) pursuant to 
+UN Regulation No. 79 under approval No. 032439. The approval number indicates that the 
+approval was granted in accordance with the requirements of UN Regulation No. 79 
+incorporating the 03 series of amendments. 
+ 
+79 R – 032439 
+6-05-20 19:32:26
+26-05-20 19:32:26
+26-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+
+=== PAGE 3 ===
+ECE/TRANS/WP.29/2025/12 
+ 
+3 
+ 
+ 
+ 
+a = 8 mm min 
+ 
+The above approval mark affixed to a vehicle shows that the vehicle type concerned 
+has, with regard to steering equipment, been approved in the Netherlands (E 4) pursuant to 
+UN Regulation No. 79 under approval No. 032439. The letter “X” preceding the approval 
+number indicates that the vehicle is equipped with ACSF which has been exempted from the 
+requirements of this UN Regulation, and/or that the vehicle is equipped with a steering 
+system which exhibits functionality defined as an ACSF of Category B2, D or E. The 
+approval number indicates that the approval was granted in accordance with the requirements 
+of UN Regulation No. 79 incorporating the 03 series of amendments.” 
+ 
+Model B 
+(See paragraph 4.5. of this Regulation) 
+ 
+ 
+ 
+a = 8 mm min 
+ 
+The above approval mark affixed to a vehicle shows that the vehicle type concerned 
+has been approved in the Netherlands (E 4) pursuant to Regulations Nos. 79 and 31. 1  
+The approval numbers indicate that, at the dates when the respective approvals were given, 
+UN Regulation No. 79 incorporating the 03 series of amendments and UN Regulation No. 31 
+included the 02 series of amendments. 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     a = 8 mm min 
+ 
+The above approval mark affixed to a vehicle shows that the vehicle type concerned 
+has been approved in the Netherlands (E 4) pursuant to UN Regulations Nos. 79 and 31. 1 
+The letter “X” preceding the approval number pursuant to Regulation No. 79 indicates that 
+the vehicle is equipped with ACSF which have been exempted from the requirements of this 
+UN Regulation, or that the vehicle is equipped with a steering system which exhibits 
+functionality defined as an ACSF of Category B2, D or E. The approval numbers indicate 
+that, at the dates when the respective approvals were given, UN Regulation No. 79 
+incorporating the 03 series of amendments and UN Regulation No. 31 included the 02 series 
+of amendments.” 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1  The second number is given merely as an example. 
+79 R - X032439 
+79 
+032439 
+31 
+021628 
+79 
+X032439 
+31 
+021628 
+6-05-20 19:32:26
+26-05-20 19:32:26
+26-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+6-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
+songqian.liu 2026-05-20 19:32:26
