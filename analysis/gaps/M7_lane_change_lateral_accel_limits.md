@@ -1,4 +1,4 @@
-# H9 — Lateral Acceleration Limits During Lane Change
+# M7 — Lateral Acceleration Limits During Lane Change
 
 | Field | Detail |
 |---|---|

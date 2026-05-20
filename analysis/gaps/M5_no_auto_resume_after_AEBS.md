@@ -1,4 +1,4 @@
-# H7 — No Auto-Resume Longitudinal Control After AEBS Stops Vehicle
+# M5 — No Auto-Resume Longitudinal Control After AEBS Stops Vehicle
 
 | Field | Detail |
 |---|---|

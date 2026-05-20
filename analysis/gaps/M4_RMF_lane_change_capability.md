@@ -1,4 +1,4 @@
-# H5 — RMF Must Be Capable of Lane Change If System Has Lane Change Feature
+# M4 — RMF Must Be Capable of Lane Change If System Has Lane Change Feature
 
 | Field | Detail |
 |---|---|

@@ -1,4 +1,4 @@
-# H3 — No Auto-Transition to Combined Control After Driver Turns Off System
+# M3 — No Auto-Transition to Combined Control After Driver Turns Off System
 
 | Field | Detail |
 |---|---|

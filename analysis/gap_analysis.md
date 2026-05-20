@@ -166,57 +166,57 @@
 
 ## Summary: Risk-Ranked Gap List
 
-> **Note (2026-05-20 re-review):** After checking all gaps against the full CN GB draft text, H2, H3, H5, H7, H8, H9 were found to have substantively equivalent requirements in the CN GB draft and have been reclassified. H4 (no CN equivalent found) and H6 (genuine timer vs. run-cycle conflict) remain High Risk.
+> **Note (2026-05-20 re-review):** After checking all gaps against the full CN GB draft text, original H1–H3, H5, H7–H9 were found to have substantively equivalent requirements in CN and reclassified to Medium (now M1–M7). Original H4 (no CN equivalent) and H6 (30-min vs. run-cycle conflict) remain High Risk, renumbered H1 and H2.
 
 ### High Risk (true regulatory gap or implementation conflict — must resolve before EU type approval)
 
-| # | Gap | Relevant R.171 §| Status |
+| # | Gap | Relevant R.171 § | Status |
 |---|---|---|---|
-| H4 | Lateral control shall not terminate while driver is motorically disengaged (during override) — **no CN equivalent** | §5.5.3.4.1.5 | Missing in CN |
-| H6 | System disable: CN ≥30 min timer (re-enableable within same run cycle); EU requires run-cycle disable — **genuine conflict** | §5.5.4.2.8.1 | Conflict |
+| **H1** | Lateral control shall not terminate while driver is motorically disengaged (during override) — no CN equivalent | §5.5.3.4.1.5 | Missing in CN |
+| **H2** | System disable: CN ≥30 min timer (re-enableable within same run cycle); EU requires run-cycle disable — genuine conflict | §5.5.4.2.8.1 | Conflict |
 
 ### Medium Risk — Traceability / Validation Gaps (CN regulation aligned; implementation/evidence must be confirmed)
 
 | # | Gap | Relevant R.171 § | CN Reference |
 |---|---|---|---|
-| H1 | Lateral override force ≤ 50 N: ADRS/EPS/software/test traceability not confirmed | §5.5.3.4.1.4 | GB §4.8.2.7 |
-| H2 | DMS unavailability → no lane departure: ADRS and validation evidence needed | §5.5.4.2.1.2 | GB §4.8.3.1.1.3 |
-| H3 | No auto-transition after driver turns off: ADRS and state machine validation needed | §5.5.2.2 | GB §4.8.1.1.4 |
-| H5 | RMF lane change capability: implementation and test evidence needed | §5.3.7.3.2 | GB §4.6.3.1.1 |
-| H7 | No auto-resume after AEBS standstill: ADRS and validation evidence needed | §5.5.3.3.4 | GB §4.8.1.3.3 |
-| H8 | Lane change blocked during disengagement warning: ADRS and test coverage needed | §5.3.7.2.1.3 | GB §6.x(e) |
-| H9 | Curved-road lane change: EU "beyond curvature" ≤ 1.5 m/s² constraint not in CN for curved roads | §6.2.3 | GB §4.6.2.2.1.8/1.9 (straight-road only) |
+| **M1** | Lateral override force ≤ 50 N: ADRS/EPS/software/test traceability not confirmed (note: CN stricter — applies to all interventions) | §5.5.3.4.1.4 | GB §4.8.2.7 |
+| **M2** | DMS unavailability → no lane departure: ADRS and validation evidence needed | §5.5.4.2.1.2 | GB §4.8.3.1.1.3 |
+| **M3** | No auto-transition after driver turns off: ADRS and state machine validation needed | §5.5.2.2 | GB §4.8.1.1.4 |
+| **M4** | RMF lane change capability: implementation and test evidence needed | §5.3.7.3.2 | GB §4.6.3.1.1 |
+| **M5** | No auto-resume after AEBS standstill: ADRS and validation evidence needed | §5.5.3.3.4 | GB §4.8.1.3.3 |
+| **M6** | Lane change blocked during disengagement warning: ADRS and test coverage needed | §5.3.7.2.1.3 | GB §6.x(e) |
+| **M7** | Curved-road lane change: EU "beyond curvature" ≤ 1.5 m/s² not in CN for curved roads | §6.2.3 | GB §4.6.2.2.1.8/1.9 (straight-road only) |
 
-### Medium Risk (requires adaptation or documentation)
+### Medium Risk — Adaptation / Documentation Required
 
-| # | Gap | Relevant R.171 §|
+| # | Gap | Relevant R.171 § |
 |---|---|---|
-| M1 | Re-engagement minimum duration (≥200ms) not specified | §5.5.4.2.5.2.1 |
-| M2 | Multiple short gaze aversion strategy not defined | §5.5.4.2.5.3 |
-| M3 | Dashboard explicitly excluded from driving-task-relevant area | §5.5.4.2.5.2 |
-| M4 | Brake override auto-resume exception (≤30 km/h / 2s) | §5.5.3.4.1.1.1 |
-| M5 | Speed limit: driver cannot set default offset above detected limit | §5.3.7.4.9 |
-| M6 | Proactive advance warning when approaching system boundary | §5.3.5.5 |
-| M7 | Headway first-activation notification if set < 2s | §5.3.7.5.1.1.2 |
-| M8 | Hardware/software tampering prevention (cybersecurity) | §5.1.3 |
-| M9 | Privacy management content in user materials | §5.6(h) |
-| M10 | DCAS controls physically distinguishable | §5.5.2.4.1 |
-| M11 | Mode confusion prevention (HMI design principle) | §5.5.2.4 |
-| M12 | Partial-failure feature-level HMI indication | §5.4.4.1 |
-| M13 | Controllability of decel/accel (manageable for driver) | §5.3.6.3.1 |
-| M14 | Direction indicator system-generated and held throughout lane change | §6.2.6 |
-| M15 | 3-second advance indicator before lane change | §6.2.7 |
-| M16 | Quantitative target lane safety criterion for approaching vehicle | §6.2.4 |
-| M17 | Lane change suppression notification to driver | §6.2.8 |
-| M18 | 7-second max from lane change initiation to start | §6.2.9.5 |
-| M19 | VRU detection as precondition for lane change | §6.2.9.4 |
-| M20 | Deceleration during lane change ≤ 2 m/s² | §6.2.4.3 |
-| M21 | Feature-level partial failure continued operation strategy | §5.4.4 |
-| M22 | Post-market surveillance: safety-critical occurrence reporting | §7.2.1 |
-| M23 | Annual reporting to Type Approval Authority | §7.2.3 |
-| M24 | In-service monitoring program | §7.1 |
-| M25 | R171SWIN software identification | §10 |
-| M26 | Formal AEBS + LDWS/LDPS compliance declaration | §5.1.5 |
+| **M8** | Re-engagement minimum duration (≥200 ms) not specified | §5.5.4.2.5.2.1 |
+| **M9** | Multiple short gaze aversion strategy not defined | §5.5.4.2.5.3 |
+| **M10** | Dashboard explicitly excluded from driving-task-relevant area | §5.5.4.2.5.2 |
+| **M11** | Brake override auto-resume exception (≤30 km/h / 2s) | §5.5.3.4.1.1.1 |
+| **M12** | Speed limit: driver cannot set default offset above detected limit | §5.3.7.4.9 |
+| **M13** | Proactive advance warning when approaching system boundary | §5.3.5.5 |
+| **M14** | Headway first-activation notification if set < 2s | §5.3.7.5.1.1.2 |
+| **M15** | Hardware/software tampering prevention (cybersecurity) | §5.1.3 |
+| **M16** | Privacy management content in user materials | §5.6(h) |
+| **M17** | DCAS controls physically distinguishable | §5.5.2.4.1 |
+| **M18** | Mode confusion prevention (HMI design principle) | §5.5.2.4 |
+| **M19** | Partial-failure feature-level HMI indication | §5.4.4.1 |
+| **M20** | Controllability of decel/accel (manageable for driver) | §5.3.6.3.1 |
+| **M21** | Direction indicator system-generated and held throughout lane change | §6.2.6 |
+| **M22** | 3-second advance indicator before lane change | §6.2.7 |
+| **M23** | Quantitative target lane safety criterion for approaching vehicle | §6.2.4 |
+| **M24** | Lane change suppression notification to driver | §6.2.8 |
+| **M25** | 7-second max from lane change initiation to start | §6.2.9.5 |
+| **M26** | VRU detection as precondition for lane change | §6.2.9.4 |
+| **M27** | Deceleration during lane change ≤ 2 m/s² | §6.2.4.3 |
+| **M28** | Feature-level partial failure continued operation strategy | §5.4.4 |
+| **M29** | Post-market surveillance: safety-critical occurrence reporting | §7.2.1 |
+| **M30** | Annual reporting to Type Approval Authority | §7.2.3 |
+| **M31** | In-service monitoring program | §7.1 |
+| **M32** | R171SWIN software identification | §10 |
+| **M33** | Formal AEBS + LDWS/LDPS compliance declaration | §5.1.5 |
 
 ### Low Risk / Aligned / N/A
 
@@ -232,13 +232,13 @@
 
 ## Key Architectural Implications for G1.3 EU Adaptation
 
-1. **Override Logic During Motoric Disengagement (H4 — True Gap)**: The DCAS software must not drop lateral control when override is detected while the driver's hands are still off the wheel. The override logic must require positive HOD confirmation before terminating lateral assistance. This is an architectural software change with no CN equivalent to guide from.
+1. **Override Logic During Motoric Disengagement (H1 — True Gap)**: The DCAS software must not drop lateral control when override is detected while the driver's hands are still off the wheel. The override logic must require positive HOD confirmation before terminating lateral assistance. This is an architectural software change with no CN equivalent to guide from.
 
-2. **System Disable: Run-Cycle vs. 30-Min (H6 — True Conflict)**: China's 30-min timer allows re-enable within the same run cycle. EU requires the system to stay disabled for the entire remaining run cycle. The EU variant requires a run-cycle disable flag (cleared only on power cycle), not a countdown timer.
+2. **System Disable: Run-Cycle vs. 30-Min (H2 — True Conflict)**: China's 30-min timer allows re-enable within the same run cycle. EU requires the system to stay disabled for the entire remaining run cycle. The EU variant requires a run-cycle disable flag (cleared only on power cycle), not a countdown timer.
 
-3. **ADRS Traceability Chain (H1, H2, H3, H5, H7, H8)**: Many requirements exist in the CN GB draft but may not be explicitly cascaded into the ADRS. Before EU type approval, all six traceability gaps need to be verified: ADRS → software requirement → implementation → validation test → test result.
+3. **ADRS Traceability Chain (M1–M6)**: Many requirements exist in the CN GB draft but may not be explicitly cascaded into the ADRS. Before EU type approval, all six traceability gaps need to be verified: ADRS → software requirement → implementation → validation test → test result.
 
-4. **Curved-Road Lane Change Control (H9)**: The lane change controller must limit the manoeuvre-induced lateral acceleration to ≤ 1.5 m/s² even on curved roads. A curvature-aware control strategy is needed. Straight-road lane change values are already aligned.
+4. **Curved-Road Lane Change Control (M7)**: The lane change controller must limit the manoeuvre-induced lateral acceleration to ≤ 1.5 m/s² even on curved roads. A curvature-aware control strategy is needed. Straight-road lane change values are already aligned.
 
 5. **Post-Market Surveillance Infrastructure**: EU R.171 requires an OEM-level monitoring program + annual reporting + DETA notifications. This is a product-lifecycle obligation, not just a type-approval one.
 
@@ -247,5 +247,5 @@
 ---
 
 *Analysis based on: CN L2GB ADRS Feishu wiki (11 topics), CN GB draft full text (智能网联汽车组合驾驶辅助系统安全要求，送审稿), UN R.171 S2 (ECE/TRANS/WP.29/2025/65), UN R.79 04 series S6.*  
-*2026-05-20: All 9 original High Risk gaps re-examined against CN GB draft full text. H2, H3, H5, H7, H8 reclassified from Missing→High to Traceability/Validation→Medium. H9 reclassified from Missing→High to Partial→Medium. H4 (no CN equivalent) and H6 (30-min vs. run-cycle conflict) confirmed High Risk.*  
+*2026-05-20: All 9 original High Risk gaps re-examined against CN GB draft full text. Original H1–H3, H5, H7–H9 reclassified to Medium (now M1–M7). Original H4 and H6 confirmed High Risk, renumbered H1 and H2. All gaps renumbered: H1–H2 (high), M1–M33 (medium).*  
 *Next step: Cross-reference with Euro NCAP Assisted Driving 2024/2025 protocol for NCAP-specific requirements beyond type approval.*

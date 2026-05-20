@@ -1,4 +1,4 @@
-# H4 — Lateral Control Must Not Terminate While Driver is Motorically Disengaged During Override
+# H1 — Lateral Control Must Not Terminate While Driver is Motorically Disengaged During Override
 
 | Field | Detail |
 |---|---|

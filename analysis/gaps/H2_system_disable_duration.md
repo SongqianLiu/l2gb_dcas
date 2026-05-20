@@ -1,4 +1,4 @@
-# H6 — System Disable Duration: CN 30-Min vs EU Run-Cycle
+# H2 — System Disable Duration: CN 30-Min vs EU Run-Cycle
 
 | Field | Detail |
 |---|---|
